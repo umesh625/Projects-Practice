@@ -20,20 +20,33 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="body-container">
+      <!-- ______________Navigation-BarSection________ -->
       <div class="navigation-bar">
         <p class="legacy">LegacyLine</p>
+        <!-- sidebar -->
+        <ul class="side-bar">
+          <i class="fa-solid fa-xmark close-sidebar"></i>
+          <li class="side-list">Home</li>
+          <li class="side-list">Services</li>
+          <li class="side-list">Contact</li>
+          <li class="side-list">About us</li>
+          <button class="sign-up">Sign Up</button>
+        </ul>
+
+        <!-- Navigation bar  -->
         <ul class="navigation-list">
-          <li class="nav-list" style="color: white">Home</li>
+          <li class="nav-list">Home</li>
           <li class="nav-list">Services</li>
           <li class="nav-list">Contact</li>
           <li class="nav-list">About us</li>
           <button class="sign-up">Sign Up</button>
         </ul>
         <div class="menu-bar">
-          <i class="fa-solid fa-bars"></i>
+          <i class="fa-solid fa-bars burger-menu"></i>
         </div>
       </div>
     </div>
