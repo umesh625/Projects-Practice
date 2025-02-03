@@ -1,21 +1,17 @@
-const sideBar = document.querySelector(".side-bar");
-const closeSideBar = document.querySelector(".close-sidebar");
-const openSideBar = document.querySelector(".burger-menu");
-
-openSideBar.addEventListener("click", function () {
-  sideBar.style.display = "flex";
+let readMore = true;
+document.querySelectorAll(".read-more").forEach((button) => {
+  button.addEventListener("click", function () {
+    const benefitDescription = this.previousElementSibling;
+    if (readMore) {
+      // const isExpanded = benefitDescription.style.webkitLineClamp === "unset";
+      benefitDescription.style.webkitLineClamp = "unset";
+      button.textContent = "Read less";
+      readMore = false; // Toggle back
+    } else {
+      benefitDescription.style.webkitLineClamp = "2";
+      button.textContent = "Read more";
+      readMore = true;
+    }
+    // this.textContent = isExpanded ? "Read more →" : "Read less ←";
+  });
 });
-
-closeSideBar.addEventListener("click", function () {
-  sideBar.style.display = "none";
-});
-
-function hideSideBar() {
-  if (window.innerWidth > 426) {
-    sideBar.style.display = "none";
-  } else {
-    sideBar.style.display = "hidden";
-  }
-}
-hideSideBar();
-window.addEventListener("resize", hideSideBar);

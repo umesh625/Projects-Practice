@@ -73,12 +73,14 @@ body {
   font-weight: 400;
   font-size: 16px;
   color: #b6b3eb;
-  margin-top: 16px;
+
+  padding: 16px 0px;
 }
 .btns-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 12px 0px;
 }
 .learn-more-btn {
   padding: 24px 32px;
@@ -103,17 +105,16 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 16px;
+  padding-bottom: 84px;
 }
 .stats-image-section {
-  /* width: 580px; */
   width: 41%;
-  /* height: 540px; */
   margin: 0px;
 }
 .stats-wrapper {
   display: flex;
   gap: 54px;
-  margin-top: 20px;
+  padding: 20px 0px;
 }
 .stat-items {
   display: flex;
@@ -155,11 +156,72 @@ body {
 /*______________Key-Benefit-Section*/
 .key-benefit-section {
   color: black;
+  padding-bottom: 60px;
 }
+
 .key-benefit-title {
   padding-top: 100px;
 }
-.benefit-container
+
+.benefit-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.benefit-icon:hover {
+  color: #5d55ff;
+}
+.benefit-title {
+  font-weight: 700;
+  font-size: 20px;
+}
+.benefit-description {
+  font-weight: 400;
+  font-size: 16px;
+  color: #1d1c3199;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.read-more {
+  color: gray;
+  font: weight 400;
+  font-size: 16px;
+  border: none;
+}
+.read-more:hover {
+  color: #5d55ff;
+}
+
+/*_____________________App-Promotion-Section*/
+
+/* .promotion-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.women-looking-at-phone {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+.women-promo-image {
+  width: 216%;
+}
+
+.app-store-section {
+  position: relative;
+  z-index: 2;
+  margin: 0px;
+  left: 76px;
+  top: 60px;
+}
+.app-store-image {
+  width: 72%;
+} */
 
 /*-------------Tablet-View----------------------*/
 @media (max-width: 768px) {
@@ -175,7 +237,7 @@ body {
   }
   /* ________Introduction-Section_________ */
   .stats-section {
-    justify-content: space-around;
+    justify-content: space-between;
   }
   .hero-introduction {
     width: 48%;
@@ -204,25 +266,53 @@ body {
   }
   /*_______________Stats-Section__________*/
 
+  .hero-introduction {
+    width: 44%;
+  }
+  .hero-title {
+    font-size: 26px;
+  }
+  .btns-wrapper {
+    padding: 12px 0px;
+    font-size: 16px;
+  }
+  .open-bank-account-btn {
+    font-size: 16px;
+    padding: 16px;
+  }
+  .learn-more-btn {
+    font-size: 16px;
+    padding: 16px 20px;
+  }
   .stat-values {
-    font-size: 24px;
+    font-size: 20px;
   }
   .stat-labels {
     font-size: 12px;
   }
   .stats-image-section {
-    width: 50%;
-    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52%;
   }
   .stats-image {
-    width: 100%;
-    margin-top: 44px;
-    margin-top: 40px;
+    width: 110%;
   }
   /*_________Sponsors-Logo_Section*/
   .logo-management img {
     max-width: 80px;
     max-height: 20px;
+  }
+  /*__________Benefit-Container_____________*/
+  .benefit-title {
+    font-size: 16px;
+  }
+  .benefit-description {
+    font-size: 12px;
+  }
+  .read-more {
+    font-size: 12px;
   }
 }
 /*___________________Mobile-View________________*/
@@ -267,6 +357,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* gap: 20px; */
   }
   .hero-introduction {
     text-align: center;
@@ -303,6 +394,10 @@ body {
   /*_________Sponsors-Logo_Section*/
   .sponsor-logo {
     display: none;
+  }
+  /*__________Benefit-Container_____________*/
+  .benefit-container {
+    flex-direction: column;
   }
 }
 
