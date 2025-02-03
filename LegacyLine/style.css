@@ -107,9 +107,12 @@ body {
   margin-top: 16px;
   padding-bottom: 84px;
 }
-.stats-image-section {
+.stats-image-wrapper {
   width: 41%;
   margin: 0px;
+}
+.stats-image {
+  width: 50%;
 }
 .stats-wrapper {
   display: flex;
@@ -153,6 +156,7 @@ body {
   justify-content: space-between;
   margin: 0;
 }
+
 /*______________Key-Benefit-Section*/
 .key-benefit-section {
   color: black;
@@ -165,12 +169,23 @@ body {
 
 .benefit-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
+  margin-top: 20px;
 }
-.benefit-icon:hover {
+
+.benefit-card {
+  border: 1px solid whitesmoke;
+  border-radius: 8px;
+  max-width: 30%;
+  padding: 0px 10px;
+  box-shadow: 1px 1px 1px whitesmoke;
+}
+.benefit-card:hover .benefit-icon,
+.benefit-card:hover .read-more {
   color: #5d55ff;
+  transition: 0ms linear;
 }
 .benefit-title {
   font-weight: 700;
@@ -187,43 +202,47 @@ body {
 }
 .read-more {
   color: gray;
-  font: weight 400;
+  background-color: transparent;
+  font-weight: 400;
   font-size: 16px;
   border: none;
-}
-.read-more:hover {
-  color: #5d55ff;
+  width: 100%;
+  text-align: end;
 }
 
-/*_____________________App-Promotion-Section*/
+/*_____________________App-Promotion-Section----------------------------------*/
 
-/* .promotion-image-wrapper {
+.promotion-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  position: relative;
+  justify-content: center;
+  width: 95%;
+  margin: auto;
 }
-.women-looking-at-phone {
+.promotion-image-wrapper {
   position: relative;
   z-index: 1;
   flex: 1;
+  width: 60%;
 }
-.women-promo-image {
-  width: 216%;
+.promotion-image {
+  width: 100%;
 }
 
-.app-store-section {
+.app-store-image-wrapper {
+  width: 20%;
+}
+
+.app-store-image {
+  width: 400px;
   position: relative;
   z-index: 2;
   margin: 0px;
-  left: 76px;
-  top: 60px;
+  left: -415px;
+  top: 25px;
 }
-.app-store-image {
-  width: 72%;
-} */
 
-/*-------------Tablet-View----------------------*/
+/*=============================TABLET VIEW============================*/
 @media (max-width: 768px) {
   .container {
     width: 95%;
@@ -290,21 +309,24 @@ body {
   .stat-labels {
     font-size: 12px;
   }
-  .stats-image-section {
+  .stats-image-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 52%;
   }
   .stats-image {
-    width: 110%;
+    width: 100%;
   }
+
   /*_________Sponsors-Logo_Section*/
   .logo-management img {
     max-width: 80px;
     max-height: 20px;
   }
+
   /*__________Benefit-Container_____________*/
+
   .benefit-title {
     font-size: 16px;
   }
@@ -314,8 +336,31 @@ body {
   .read-more {
     font-size: 12px;
   }
+  /* app store section  */
+  .app-store-section {
+    position: static;
+  }
+
+  /* -----------------------PROMOTION SECTION ------------------- */
+
+  .promotion-image {
+    width: 125%;
+  }
+
+  .app-store-image-wrapper {
+    width: 20%;
+  }
+
+  .app-store-image {
+    width: 240%;
+    position: relative;
+    z-index: 2;
+    margin: 0px;
+    left: -165px;
+    top: 100px;
+  }
 }
-/*___________________Mobile-View________________*/
+/*===================MOBILE - VIEW=================================*/
 @media (max-width: 576px) {
   .logo {
     font-size: 20px;
@@ -388,7 +433,7 @@ body {
   .stat-values {
     font-size: 20px;
   }
-  .stats-image-section {
+  .stats-image-wrapper {
     width: 92%;
   }
   /*_________Sponsors-Logo_Section*/
@@ -397,7 +442,31 @@ body {
   }
   /*__________Benefit-Container_____________*/
   .benefit-container {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .benefit-card {
+    max-width: 95%;
+  }
+
+  /* -----------------------PROMOTION SECTION ------------------- */
+  .promotion-container {
+    width: 100%;
+  }
+  .promotion-image-wrapper {
+    position: static;
+    width: 50%;
+    margin: 0px;
+  }
+  .promotion-image {
+    width: 100%;
+  }
+
+  .app-store-image-wrapper {
+    display: none;
   }
 }
 
